@@ -93,11 +93,11 @@ public class WorkflowSimBasicExample1 {
              * the data center or the host doesn't have sufficient resources the
              * exact vmNum would be smaller than that. Take care.
              */
-            int vmNum = 20;//number of vms;
+            int vmNum = 100;//number of vms;
             /**
              * Should change this based on real physical path
              */
-            String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            String daxPath = "/home/wyy/network_sim/WorkflowSim-1.0/config/dax/Montage_100.xml";
             File daxFile = new File(daxPath);
             if (!daxFile.exists()) {
                 Log.printLine("Warning: Please replace daxPath with the physical path in your working environment!");
@@ -249,7 +249,7 @@ public class WorkflowSimBasicExample1 {
      * @param list list of jobs
      */
     protected static void printJobList(List<Job> list) {
-        String indent = "    ";
+        String indent = " ";
         Log.printLine();
         Log.printLine("========== OUTPUT ==========");
         Log.printLine("Job ID" + indent + "Task ID" + indent + "STATUS" + indent
@@ -262,7 +262,7 @@ public class WorkflowSimBasicExample1 {
                 Log.print("Stage-in");
             }
             for (Task task : job.getTaskList()) {
-                Log.print(task.getCloudletId() + ",");
+                Log.print(task.getCloudletId());
             }
             Log.print(indent);
 

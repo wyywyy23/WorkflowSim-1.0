@@ -54,11 +54,11 @@ public class MAXMINSchedulingAlgorithmExample extends DataAwareSchedulingAlgorit
              * the data center or the host doesn't have sufficient resources the
              * exact vmNum would be smaller than that. Take care.
              */
-            int vmNum = 5;//number of vms;
+            int vmNum = 100;//number of vms;
             /**
              * Should change this based on real physical path
              */
-            String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            String daxPath = "/home/wyy/network_sim/WorkflowSim-1.0/config/dax/Montage_100.xml";
 
             File daxFile = new File(daxPath);
             if (!daxFile.exists()) {
